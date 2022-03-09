@@ -122,7 +122,7 @@ func (builder *SitemapBuilder) procesSite(site *domain.Site, approvedLink chan<-
 		if translatedAsset := translateLink(site.Url, asset); translatedAsset != "" {
 			site.Assets = append(site.Assets, translatedAsset)
 		} else {
-			fmt.Println("Ignoring asset", asset, "which translated to", translatedAsset)
+			println("Ignoring asset", asset, "which translated to", translatedAsset)
 		}
 	}
 
